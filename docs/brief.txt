@@ -1,0 +1,28 @@
+IPT Major Project Brief
+
+Who:   Students and Staff
+What:  Digital Multimedia Content: Based on School Subject
+Where: St Pius X College
+Why:   Strengthen schools resources.
+How:   Agile - Fixed Time-Frame
+
+Purpose::
+  The St Pius X College senior executive is currently interested
+  in bolstering the amount of digital multimedia content available
+  to students and staff for the purpose of supporting and encouraging
+  effective teaching and learning, particularly of higher order
+  concepts and skills.
+
+Testing and Feedback:
+ + A testing plan, to access all aspects of the site.
+ + Each stop on the "tour" needs a comment.
+ + Report to identify key points to fix.
+
+Comprehensive:
+  If a test works, how do we know it works?
+
+Phases:
+ 1: Partial Functionality
+   - Schedule, A partial implementation, but fully featured, of the final site.
+ 2: New Features / Bug Fixes
+
