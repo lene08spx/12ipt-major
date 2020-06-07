@@ -1,0 +1,151 @@
+
+@font-face {
+  font-family: "PTSerif";
+  src: url("/res/ptserif.ttf");
+}
+
+:root {
+  --ink-colour: #050048;
+  --content-width: 750px;
+}
+
+body {
+  background-image: url("/res/parchment.gif");
+  background-repeat: repeat;
+  background-size: 33%;
+  width: 800px;
+  margin: 5px auto;
+  font-family: "PTSerif";
+}
+
+a {
+  color: rgb(0, 87, 187);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 170px 40px;
+  padding-bottom: 5px;
+  background-repeat: repeat;
+  background-size: 175px;
+}
+
+header > img {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+}
+
+header > h1 {
+  grid-row: 1;
+  grid-column: 2;
+  margin: auto auto;
+  margin-left: 15px;
+  color: var(--ink-colour);
+  font-size: 60px;
+  font-style: italic;
+  height: 75px;
+}
+
+header > div {
+  padding: 2px 15px;
+  grid-area: 2 / 1 / 3 / 3;
+  border-top: 4px solid var(--ink-colour);
+  border-bottom: 4px solid var(--ink-colour);
+  color: white;
+  font-size: 20px;
+}
+header > div > a {
+  position: relative;
+  margin-right: 25px;
+}
+header > div > a:not(:last-child)::after {
+  right: -16px;
+  top: -7px;
+  content: " · ";
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+header > div.tree > a:not(:last-child)::after {
+  right: -20px;
+  content: " > ";
+}
+
+main {
+  margin: 10px;
+  color: var(--ink-colour);
+}
+
+main > h1 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 65px;
+  text-align: center;
+}
+main > h1::before, main > h1::after {
+  content: " · ";
+  font-weight: bold;
+}
+
+main > section > h1 {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+main > section > a {
+  display: block;
+  position: relative;
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+main > section > a::before {
+  top: 11px;
+  left: -15px;
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+main > article > h1 {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-align: center;
+  width: var(--content-width);
+  border-bottom: 2px solid var(--ink-colour);
+}
+
+main > article > ul {
+  position: relative;
+  font-size: 20px;
+  margin: 0 auto;
+  width: var(--content-width);
+}
+
+main > article > p {
+  margin: 20px auto;
+  width: var(--content-width);
+}
+
+main > article > table {
+  margin: 20px auto;
+  width: var(--content-width);
+}
+
+main > article > iframe {
+  display: block;
+  margin: 0 auto;
+  width: var(--content-width);
+  height: calc(var(--content-width) * 0.5625);
+} 
