@@ -151,15 +151,11 @@ test("testingArrayContains", function (): void {
   const fixtureObject = [{ deno: "luv" }, { deno: "Js" }];
   assertArrayContains(fixture, ["deno"]);
   assertArrayContains(fixtureObject, [{ deno: "luv" }]);
-  let didThrow;
-  try {
-    assertArrayContains(fixtureObject, [{ deno: "node" }]);
-    didThrow = false;
-  } catch (e) {
-    assert(e instanceof AssertionError);
-    didThrow = true;
-  }
-  assertEquals(didThrow, true);
+  assertThrows(
+    (): void => assertArrayContains(fixtureObject, [{ deno: "node" }]),
+    AssertionError,
+    `actual: "[ { deno: "luv" }, { deno: "Js" } ]" expected to contain: "[ { deno: "node" } ]"\nmissing: [ { deno: "node" } ]`
+  );
 });
 
 test("testingAssertStringContainsThrow", function (): void {
@@ -169,7 +165,7 @@ test("testingAssertStringContainsThrow", function (): void {
   } catch (e) {
     assert(
       e.message ===
-        `actual: "Denosaurus from Jurassic" expected to contains: "Raptor"`
+        `actual: "Denosaurus from Jurassic" expected to contain: "Raptor"`
     );
     assert(e instanceof AssertionError);
     didThrow = true;
