@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+
+# Debug builds
+debug.js
+
+# Misc
+hack.js
+hack.ts
+test.db
+build/sqlite-src
+build/wasi-sdk
+deno
+
+# NPM garbage
+node_modules
+package-lock.json

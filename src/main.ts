@@ -1,5 +1,5 @@
 import { serve, ServerRequest, parse, exists } from "./deps.ts";
-import { PageModule } from "./page.ts";
+//import { PageModule } from "./page.ts";
 
 const webPort = 2020;
 
@@ -25,9 +25,14 @@ const mimeTypes = new Map([
 
 // Start web service
 const s = serve({ port: webPort });
-console.log("SPX StudyCities");
-console.log(`Web service on port ${webPort}`);
-console.log(`Goto http://localhost:${webPort}/index.html`)
+console.log("+----------------------------------------------+");
+console.log("| SPX StudyCities                              |");
+console.log("|                                              |");
+console.log("| 2020 IPT - Major Project                     |");
+console.log("| Oliver Lenehan                               |");
+console.log("|                                              |");
+console.log("| Visit http://localhost:${webPort}/index.html |");
+console.log("+----------------------------------------------+");
 
 // Auto open user's browser
 const p = Deno.run({ cmd: ["cmd", "/C", "start", "", `http://localhost:${webPort}/index.html`] });
