@@ -37,7 +37,7 @@ function mapValue(val=0, srcMin=0, srcMax=100, outMin=0, outMax=100) {
 	return output;
 }
 class FunctionPlot {
-	constructor(e=HTMLDivElement.prototype) {
+	constructor(e=HTMLElement.prototype) {
 		this.isPlaying = false;
 		this.instrument = new SimpleVCO();
 		// create the function data
