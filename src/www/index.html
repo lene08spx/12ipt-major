@@ -9,23 +9,28 @@
   <script defer src="./res/katex.min.js"></script>
   <script defer src="./res/katex-auto-render.js" onload="renderMathInElement(document.body)"></script>
 </head>
-<body>
+<body class="homepage">
 	<audio src="./res/page-turn.mp3" autoplay></audio>
   <header>
     <img src="./res/logo.svg">
     <h1>The StudyCities Project</h1>
-    <div>
-      <a href="./index.html">Home</a>
-      <a href="./maths/index.html">Mathematics</a>
-    </div>
   </header>
   <main>
-    <h1>Subject Areas</h1>
-    <section>
-      <h1>Mathematics</h1>
-      <a href="./maths/vectors/index.html">Vectors</a>
-      <a href="./maths/projectile-motion/index.html">Projectile Motion</a>
-    </section>
+    <h1>Sitemap</h1>
+		<h2><a href="./index.html">Homepage</a></h2>
+		<h2><a href="./maths/index.html">Mathematics</a></h2>
+		<ul>
+			<li><a href="./maths/vectors/index.html">Vectors</a></li>
+			<ul>
+				<li><a href="./maths/vectors/basics.html">Basics</a></li>
+				<li><a href="./maths/vectors/notation.html">Notation</a></li>
+			</ul>
+			<li><a href="./maths/projectile-motion/index.html">Projectile Motion</a></li>
+			<ul>
+				<li><a href="./maths/projectile-motion/path-equation.html">Path Equation</a></li>
+				<li><a href="./maths/projectile-motion/time-equations.html">Time Equations</a></li>
+			</ul>
+		</ul>
   </main>
 </body>
 </html>

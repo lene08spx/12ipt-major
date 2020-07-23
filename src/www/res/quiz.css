@@ -1,0 +1,53 @@
+.quiz form {
+	margin: 0 auto;
+	width: var(--content-width);
+}
+
+.quiz fieldset {
+	border: 2px solid var(--ink-colour);
+	margin-bottom: 20px;
+}
+
+.quiz legend {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+.quiz form label {
+	display: block;
+	cursor:pointer;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.quiz form label:hover {
+	text-decoration: underline;
+}
+
+.quiz form input[type="radio"] {
+	pointer-events: none;
+	visibility: hidden;
+	margin: 0;
+	margin-right: 1.5em;
+	margin-top: 0.3em;
+	vertical-align: top;
+}
+.quiz form input[type="radio"]::before{
+	visibility: visible;
+	display: inline-block;
+	width: 1.3em;
+	height: 1.25em;
+	content: attr(value);
+	text-align: center;
+	font-family: "PT Serif";
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-top: 0.05em;
+	margin-top: -0.2em;
+	border-radius: 50%;
+	border: 0.2em solid var(--ink-colour);
+}
+.quiz form input[type="radio"]:checked::before{
+	background: var(--ink-colour);
+	color: #ffdfb6;
+}

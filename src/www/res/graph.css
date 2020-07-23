@@ -1,0 +1,36 @@
+.graph > h1 {
+	text-align: center;
+}
+.graph > button {
+	display: block;
+	width: 200px;
+	font-family: "PTSerif";
+	border-radius: 10px;
+	font-size: 30px;
+	margin: auto;
+	margin-top: 10px;
+	cursor: pointer;
+	border: 3px solid var(--ink-colour);
+	padding: 5px;
+	outline: none;
+	font-weight: bold;
+	background-color: transparent;
+}
+.graph > button:hover {
+	background-color: var(--ink-colour);
+	color: #ffdfb6;
+}
+.graph > svg {
+	display: block;
+	margin: auto;
+	width: 65%;
+	border: 2px solid var(--ink-colour);
+	stroke: var(--ink-colour);
+}
+.graph > svg polyline {
+	fill: none;
+	stroke-linecap: round;
+}
+.graph > svg circle {
+	fill: var(--ink-colour);
+}
