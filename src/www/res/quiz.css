@@ -1,6 +1,6 @@
 .quiz form {
 	margin: 0 auto;
-	width: var(--content-width);
+	width: 100%;
 }
 
 .quiz fieldset {
@@ -21,7 +21,7 @@
 	margin-bottom: 5px;
 }
 .quiz form label:hover {
-	text-decoration: underline;
+	background-color: #05004822;
 }
 
 .quiz form input[type="radio"] {
@@ -37,13 +37,13 @@
 	display: inline-block;
 	width: 1.3em;
 	height: 1.25em;
-	content: attr(value);
+	content: attr(data-letter);
 	text-align: center;
 	font-family: "PT Serif";
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-top: 0.05em;
-	margin-top: -0.2em;
+	/* margin-top: -0.2em; */
 	border-radius: 50%;
 	border: 0.2em solid var(--ink-colour);
 }
