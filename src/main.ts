@@ -130,7 +130,7 @@ async function serveData(r: ServerRequest): Promise<void> {
 	}
 	else if (r.url.startsWith("/api/quiz-answers")) {
 		const answers: any = {};
-		for (let row of quizDB.query(`SELECT Choice.questionId, Choice.choiceId FROM Choice, Question WHERE choiceCorrect = 1 AND Question.quizId = ?`, [url.searchParams.get("quizId") || ""])){
+		for (let row of quizDB.query(`SELECT Choice.questionId, Choice.choiceId FROM Choice, Question WHERE Choice.questionId = Question.questionId AND choiceCorrect = 1 AND Question.quizId = ?`, [url.searchParams.get("quizId") || ""])){
 			answers[String(row[0])] = String(row[1]);
 		}
 		response.status = 200;

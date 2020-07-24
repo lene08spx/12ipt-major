@@ -49,12 +49,15 @@ class Quiz {
 				e.preventDefault();
 				const formAnswers = new URLSearchParams(new FormData(form));
 				form.className = "marked";
-				for (let [questionId,correctAnswer] of Object.entries(await (await fetch(`/api/quiz-answers?quizId=${quizData.id}`)).json())) {
+				const answerList = await (await fetch(`/api/quiz-answers?quizId=${quizData.id}`)).json();
+				console.log(answerList);
+				for (let [questionId,correctAnswer] of Object.entries(answerList)) {
 					const answer = formAnswers.get(questionId);
 					if (correctAnswer === answer) {
 						const ele = document.querySelector(`input[value="${answer}"][name="${questionId}"]`).parentElement;
 						ele.className = "correct";
 					} else {
+						console.log(answer,questionId,formAnswers.toString());
 						const answered = document.querySelector(`input[value="${answer}"][name="${questionId}"]`).parentElement;
 						const actual = document.querySelector(`input[value="${correctAnswer}"][name="${questionId}"]`).parentElement;
 						answered.className = "incorrect";
