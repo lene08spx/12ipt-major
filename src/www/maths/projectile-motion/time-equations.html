@@ -6,6 +6,7 @@
   <link href="../../res/logo.gif" rel="icon">
   <link href="../../res/studycities.css" rel="stylesheet">
   <link href="../../res/katex.min.css" rel="stylesheet">
+	<script defer src="../../res/graph.js"></script>
   <script defer src="../../res/katex.min.js"></script>
   <script defer src="../../res/katex-auto-render.js" onload="renderMathInElement(document.body)"></script>
 </head>
@@ -38,7 +39,7 @@
       </p>
       <p>
         But we can talk about velocity in terms of horizontal and vertical components:<br>
-        \(\utilde{v}=\dot{x}\utilde{i}+\dot{y}\utilde{j}\) where \(\dot{x}=\utilde{v}\cdotp\utidle{i}\) and \(\dot{y}=\utilde{v}\cdotp\utidle{j}\)
+        \(\utilde{v}=\dot{x}\utilde{i}+\dot{y}\utilde{j}\) where \(\dot{x}=\utilde{v}\cdotp\utilde{i}\) and \(\dot{y}=\utilde{v}\cdotp\utilde{j}\)
       </p>
     </article>
     <article>
@@ -50,7 +51,12 @@
       <p>
         We can use these to find some other helpful results:<br>
         \(v^2 = \dot{x}^2 + \dot{y}^2\) and \(\tan\theta = \frac{\dot{y}}{\dot{y}}\)
-      </p>
+			</p>
+			<p>
+				Play around with the Desmos graph below,
+				changing the speed \(v\) and direction \(\alpha\) sliders.
+			</p>
+			<iframe src="https://www.desmos.com/calculator/xqht65cmrw"></iframe>
     </article>
     <article>
       <h2>The Fundamentals of Projectile Motion</h2>
@@ -61,7 +67,15 @@
       <p>
         Resulting from this, horizontal and vertical acceleration is as thus:<br>
         \(\ddot{x}=0\) and \(\ddot{y}=-g\).
-      </p>
+			</p>
+			<p>
+				All projectiles follow a path similar to the chart below. Click play
+				to listen to the dot flying up and then back down to the ground.
+			</p>
+			<div class="graph"
+				data-domain="-1->1"
+				data-equation="return -(x**2)"
+				data-katex-equation="y=-x^2"></div>
     </article>
 		<h3>Next Topic: <a href="./path-equation.html">Path Equation</a></h3>
   </main>

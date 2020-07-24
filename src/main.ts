@@ -34,9 +34,9 @@ console.log("| Visit "+webURL+" |");
 console.log("+----------------------------------------+");
 
 // Auto open user's browser
-//const p = Deno.run({ cmd: ["cmd", "/C", "start", "", webURL] });
-//await p.status();
-//Deno.close(p.rid);
+const p = Deno.run({ cmd: ["cmd", "/C", "start", "", webURL] });
+await p.status();
+Deno.close(p.rid);
 
 window.onunload = ()=>{quizDB.close()};
 
@@ -130,8 +130,8 @@ async function serveData(r: ServerRequest): Promise<void> {
 	}
 	else if (r.url.startsWith("/api/quiz-answers")) {
 		const answers: any = {};
-		for (let row of quizDB.query(`SELECT Choice.questionId, Choice.choiceId FROM Choice WHERE choiceCorrect = 1`)){
-			answers[row[0]] = row[1];
+		for (let row of quizDB.query(`SELECT Choice.questionId, Choice.choiceId FROM Choice, Question WHERE choiceCorrect = 1 AND Question.quizId = ?`, [url.searchParams.get("quizId") || ""])){
+			answers[String(row[0])] = String(row[1]);
 		}
 		response.status = 200;
 		response.body = JSON.stringify(answers);

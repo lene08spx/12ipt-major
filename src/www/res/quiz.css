@@ -24,15 +24,38 @@
 	background-color: #05004822;
 }
 
+.quiz form.marked {
+	pointer-events: none;
+}
+.quiz form.marked > button {
+	display: none;
+}
+.quiz form.marked label::before {
+	display: inline-block;
+	width: 1em;
+	content: " ";
+	height: 1em;
+}
+.quiz form.marked label.correct::before {
+	content: "✅";
+}
+.quiz form.marked label.incorrect::before {
+	content: "❌️";
+}
+.quiz form.marked label.actual::before {
+	content: "➡️";
+}
+
 .quiz form input[type="radio"] {
 	pointer-events: none;
-	visibility: hidden;
-	margin: 0;
-	margin-right: 1.5em;
-	margin-top: 0.3em;
-	vertical-align: top;
+	margin: 0 1em;
+	position: relative;
+	vertical-align: middle;
 }
 .quiz form input[type="radio"]::before{
+	position: absolute;
+	top: -100%;
+	left: -50%;
 	visibility: visible;
 	display: inline-block;
 	width: 1.3em;
@@ -43,6 +66,7 @@
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-top: 0.05em;
+	background-color: #ffdfb6;
 	/* margin-top: -0.2em; */
 	border-radius: 50%;
 	border: 0.2em solid var(--ink-colour);

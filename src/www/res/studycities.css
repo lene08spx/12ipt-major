@@ -123,6 +123,9 @@ article {
 	margin-bottom: 1em;
 }
 
+header {
+	border-bottom: 0.2em solid var(--ink-colour);
+}
 header > .banner {
 	display: flex;
 	margin: 0 auto;
@@ -143,7 +146,6 @@ header > .banner > h1 {
 }
 header > .tree {
 	font-size: 1.2em;
-	border-bottom: 0.2em solid var(--ink-colour);
 }
 header > .tree > img {
 	display: inline-block;

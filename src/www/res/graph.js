@@ -71,7 +71,7 @@ class FunctionPlot {
 		const plotLine = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
 		plotLine.setAttribute("stroke-width", 10);
 		// the title of the graph
-		const plotTitle = document.createElement("h1");
+		const plotTitle = document.createElement("h2");
 		plotTitle.textContent = `\\(${e.getAttribute("data-katex-equation")}\\), for \\(${domainMin}<x<${domainMax}\\)`;
 		// "play" the graph
 		const plotPlayButton = document.createElement("button");
@@ -110,3 +110,4 @@ class FunctionPlot {
 for (let e of document.getElementsByClassName("graph")) {
 	new FunctionPlot(e);
 }
+

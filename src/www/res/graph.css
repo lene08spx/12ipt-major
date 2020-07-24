@@ -24,6 +24,7 @@
 	display: block;
 	margin: auto;
 	width: 65%;
+	max-height: 50vh;
 	border: 2px solid var(--ink-colour);
 	stroke: var(--ink-colour);
 }
